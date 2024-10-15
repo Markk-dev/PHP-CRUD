@@ -23,6 +23,6 @@ $user = $result->fetch_assoc();
         <input type="password" name="password" placeholder="New Password (leave blank to keep current)">
         <input type="submit" value="Update">
     </form>
-    <a href="register.php">Back</a>
+    <a href="users.php">Back</a>
 </body>
 </html>
