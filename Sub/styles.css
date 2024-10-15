@@ -1,0 +1,160 @@
+body {
+    background-color: rgb(13, 17, 23);
+    font-family: 'inter';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+p{
+    text-align: center;
+    position: relative;
+    top: 10px;
+    color: #7d8690;
+}
+
+.Link{
+    display: inline-block;
+    margin-top:3px;
+    text-decoration: none;
+    color: White;
+}
+.ActionCase{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Editbtn{
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    border-radius: 10px;
+    background-color:#f49c29;
+
+}
+
+.Editbtn:Hover{
+    background-color:#d1831e;
+    transition: all 0.3s ease;   
+}
+.Delbtn:Hover{
+    background-color:#c92c21;
+    transition: all 0.3s ease;   
+}
+
+
+.Delbtn{
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    border-radius: 10px;
+    background-color:#f3372a;
+
+}
+
+.active{
+    background-color: #fc5c51;
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 18%;
+    top: 0;
+}
+
+.Regbtn {
+    display: inline-block;         
+    margin-top: 6px;              
+    margin-left: -2px;            
+    font-size: small;             
+    text-align: center;           
+    padding: 10px;                
+    color: white;                 
+    text-decoration: none;        
+    position: relative;           
+}
+
+.Regbtn::after {
+    content: "";                  
+    position: absolute;           
+    height: 2px;                 
+    width: 0;                    
+    top: 30px;                 
+    left: 10px;                     
+    background-color: #FF6452;  
+    transition: all 0.3s ease;   
+}
+
+.Regbtn:hover::after {
+    width: 50%;                  
+}
+
+
+
+.fa-solid{
+    margin-left: 5px;
+}
+
+
+.btn {        
+    position: relative;             
+    background-color: rgb(36, 41, 47);
+    width: 13%;                    
+    height: 12%;                   
+    margin-top: -5px;             
+    text-align: center;                              
+    margin-left: 6%;               
+    border-radius: 9px 9px 0 0;   
+}
+
+
+.Cover{
+    background-color: rgb(22, 27, 34);
+    width: 70%;
+    position: relative;
+    height: 80%;
+    border-radius: 4px;
+    
+}
+
+.Regist {
+    background-color: rgb(36, 41, 47);
+    position: absolute;
+    top: 0;
+    margin-top: 100px;
+    height: 77%;
+    width: 1035px;
+    padding: 20px;
+    border-radius: 0 0 4px 4px;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td {
+    padding: 10px;
+    font-size: .8rem;
+    text-align: center;
+    color: white;
+    border: .2px solid #ccc;
+}
+
+th {
+    background-color: #2c3138;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+tr:hover{
+    background-color: #5c6269;
+}
