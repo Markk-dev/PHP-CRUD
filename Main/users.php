@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users</title>
-    <link rel="stylesheet" href="./Sub/user.css">
+    <link rel="stylesheet" href="../Sub/user.css">
 </head>
 <body>
     <h2>Registered Users</h2>
