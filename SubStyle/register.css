@@ -168,3 +168,13 @@ input[type="submit"]:hover {
 .Regbtn:hover::after {
     width: 50%;                  
 }
+
+.error-message {
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: small;
+    border-radius: 5px;
+}

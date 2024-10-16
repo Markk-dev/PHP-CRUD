@@ -8,26 +8,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $conn->real_escape_string($_POST['email']);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    
-    $checkUserSql = "SELECT * FROM users WHERE lname='$lname' AND fname='$fname' AND email='$email'";
-    $result = $conn->query($checkUserSql);
+    try {
+        $checkUserSql = "SELECT * FROM users WHERE lname='$lname' AND fname='$fname' AND email='$email'";
+        $result = $conn->query($checkUserSql);
 
-    if ($result->num_rows > 0) {
-        
-        echo "Error: A same match in parameter is present.";
-    } else {
-        
-        $sql = "INSERT INTO users (lname, fname, email, password) VALUES ('$lname', '$fname', '$email', '$password')";
-
-        if ($conn->query($sql) === TRUE) {
-            header('Location: users.php');
-            exit();
+        if ($result->num_rows > 0) {
+            throw new Exception("Error: A user with the same name and email already exists.");
         } else {
-            
-            echo "Error: Unable to register user. Please try again.";
-            
-            
+            $sql = "INSERT INTO users (lname, fname, email, password) VALUES ('$lname', '$fname', '$email', '$password')";
+            if ($conn->query($sql) === TRUE) {
+                header('Location: users.php');
+                exit();
+            } else {
+                throw new Exception("Error: Unable to register user. Please try again.");
+            }
         }
+    } catch (Exception $e) {
+        
+        header('Location: register.php?error=' . urlencode($e->getMessage()));
+        exit();
     }
 }
 $conn->close();

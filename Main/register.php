@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="../SubStyle/register.css">
     <link rel="stylesheet" href="../SubStyle/cursor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-   
+
 </head>
 <body>
 <div class="circle"></div>
 
 <div class="Cover">
-
     <p>Registration</p>
 
     <div class="headertag">
@@ -22,24 +21,26 @@
         <p style="color: #ffffff; margin: 10px 13px 0 0; font-size: 12px">register.php</p>
     </div>
 
-
     <div class="back">
         <i class="fa-solid fa-user" style="color: #ffffff;"></i>
         <a href="../Main/users.php" class="Regbtn">View Users</a>
     </div>
 
-
     <div class="Regist">
-    <div class="active"></div>
+        <div class="active"></div>
 
-    <form action="store.php" method="POST"> 
-        <input type="text" name="lname" placeholder="Last Name" required>
-        <input type="text" name="fname" placeholder="First Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Register">
-    </form>
-    
+        <?php if (isset($_GET['error'])): ?>
+            <div class="error-message"><?php echo htmlspecialchars($_GET['error']); ?></div>
+        <?php endif; ?>
+
+        <form action="store.php" method="POST"> 
+            <input type="text" name="lname" placeholder="Last Name" required>
+            <input type="text" name="fname" placeholder="First Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Register">
+        </form>
+        
     </div>
 </div>
 
