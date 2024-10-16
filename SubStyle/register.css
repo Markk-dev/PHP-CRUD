@@ -1,0 +1,170 @@
+body {
+    background-color: rgb(13, 17, 23);
+    font-family: 'inter';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.active{
+    background-color: #74C0FC;
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 18%;
+    top: 0;
+}
+
+
+.Cover {
+    background-color: rgb(22, 27, 34);
+    width: 40%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 65%;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Regist {
+    background-color: rgb(36, 41, 47);
+    position: absolute;
+    top: 5px;
+    margin-top: 100px;
+    height: 72%;
+    width: 93.2%;
+    padding: 20px;
+    border-radius: 0 0 4px 4px;
+}
+
+.fa-brands {
+    place-content: center;
+    margin: -5px 0 0 14px;
+    font-size: 25px;
+}
+
+p {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    color: #7d8690;
+}
+
+.headertag {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(36, 41, 47);
+    width: 23%;
+    height: 12%;
+    gap: 6px;
+    margin-top: 23px;
+    text-align: center;
+    margin-left: 6%;
+    border-radius: 9px 9px 0 0;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #4b545f;
+    border-radius: 4px;
+    background-color: rgb(50, 55, 62);
+    color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #74C0FC;
+    outline: none;
+}
+
+input[type="submit"] {
+    position: relative;
+    padding: 11px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #74C0FC;
+    transition: color 0.3s;
+}
+
+input[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #74C0FC;
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+input[type="submit"]:hover {
+    background-color: #74C0FC;
+    transition:  ease-in-out 0.2s;
+    z-index: 1;
+}
+
+.back {
+    position: absolute;  
+    font-size: small;
+    display: flex;                
+    flex-direction: row;         
+    justify-content: center;      
+    align-items: center;          
+    width: 20%;                    
+    height: 12%; 
+    z-index: 99;
+    right: 10px;
+    top: 60px;
+    margin-left: 6%;
+    margin-top: -5px;     
+}
+
+.fa-solid {
+    margin-left: 5px;            
+}
+
+.Regbtn {          
+    margin-left: 5px;            
+    font-size: small;             
+    text-align: center;           
+    padding: 10px;                
+    color: white;
+    text-decoration: none;        
+    position: relative;           
+}
+
+.Regbtn::after {
+    content: "";                  
+    position: absolute;           
+    height: 2px;                 
+    width: 0;                    
+    top: 30px;                  
+    left: 10px;                 
+    background-color: #FF6452;  
+    transition: all 0.3s ease;   
+}
+
+.Regbtn:hover::after {
+    width: 50%;                  
+}

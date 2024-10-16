@@ -25,7 +25,7 @@
 
     <div class="back">
         <i class="fa-solid fa-user" style="color: #ffffff;"></i>
-        <a href='../Main/register.php' class="Regbtn">Register New</a>
+        <a href='../Main/register.php' class="Regbtn">Registration</a>
     </div>
   
 

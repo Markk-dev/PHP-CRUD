@@ -20,6 +20,7 @@ p{
     text-decoration: none;
     color: White;
 }
+
 .ActionCase{
     display: flex;
     flex-direction: row;
