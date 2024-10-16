@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users</title>
-    <link rel="stylesheet" href="../Sub/styles.css">
+    <link rel="stylesheet" href="../SubStyle/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet" href="../SubStyle/cursor.css">
 
 
 </head>
 <body>
 
+<div class="circle"></div>
+
 <div class="Cover">
 
     <p>Registered Users</p>
 
-    <div class="btn">
+    <div class="headertag">
+        <i class="fa-brands fa-php" style="color: #74C0FC;"></i>
+        <p style="color: #ffffff; margin: 12px 0 0 0;">users.php</p>
+    </div>
+
+    <div class="back">
         <i class="fa-solid fa-user" style="color: #ffffff;"></i>
         <a href='../Main/register.php' class="Regbtn">Register New</a>
     </div>
+  
 
     <div class="Regist">
         <div class="active"></div>
@@ -59,13 +67,13 @@
                     </tr>";
             }
             ?>
-
         </table>
         
-        </div>
+    </div>
 </div>
     
    
- 
+<script src="../SubScript/cursor.js"></script>
+
 </body>
 </html>

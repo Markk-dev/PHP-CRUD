@@ -99,24 +99,51 @@ p{
 .fa-solid{
     margin-left: 5px;
 }
+.fa-brands{
+    place-content: center;
+    margin: -13px 0 0 23px;
+    font-size: 25px;
+}
 
 
-.btn {        
+.btn, .back {        
     position: relative;             
+    width: 13%;                    
+    height: 12%;                   
+    margin-top: -5px;             
+    text-align: center;                              
+    margin-left: 6%;               
+}
+
+.back{
+    position: absolute;  
+    width: 13%;                    
+    height: 12%; 
+    z-index: 10;
+    right: -2px;
+    top: 60px;
+}
+
+.headertag{
+    position: relative; 
+    display: flex;
+    flex-direction: row;  
+    gap: 7px;          
     background-color: rgb(36, 41, 47);
     width: 13%;                    
     height: 12%;                   
     margin-top: -5px;             
     text-align: center;                              
     margin-left: 6%;               
-    border-radius: 9px 9px 0 0;   
+    border-radius: 9px 9px 0 0;  
 }
-
 
 .Cover{
     background-color: rgb(22, 27, 34);
-    width: 70%;
+    width: 80%;
     position: relative;
+    align-items: center;
+    justify-content: center;
     height: 80%;
     border-radius: 4px;
     
@@ -128,7 +155,7 @@ p{
     top: 0;
     margin-top: 100px;
     height: 77%;
-    width: 1035px;
+    width: 96.5%;
     padding: 20px;
     border-radius: 0 0 4px 4px;
     

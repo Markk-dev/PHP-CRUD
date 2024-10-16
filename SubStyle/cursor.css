@@ -1,0 +1,13 @@
+.circle {
+  --circle-size: 40px;
+  position: absolute;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  border: 1px solid white;
+  border-radius: 50%;
+  top: 0;
+  
+  left: 0;
+  z-index: 99;
+  pointer-events: none;
+}
