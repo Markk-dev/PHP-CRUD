@@ -56,11 +56,11 @@
                             <div class= ActionCase>
 
                                <div class=Editbtn>
-                                    <a href='edit.php?id={$row['id']}' class='Link'>Edit</a>
+                                    <a href='edit.php?id={$row['id']}' class='LinkEdit'>Edit</a>
                                 </div>
 
                                 <div class=Delbtn>
-                                    <a href='delete.php?id={$row['id']}' class='Link'>Delete</a>
+                                    <a href='delete.php?id={$row['id']}' class='LinkDel'>Delete</a>
                                 </div>
                             </div>
                         </td>

@@ -14,11 +14,15 @@ p{
     color: #7d8690;
 }
 
-.Link{
+.LinkEdit, .LinkDel{
     display: inline-block;
     margin-top:3px;
     text-decoration: none;
     color: White;
+}
+
+.LinkDel{
+    
 }
 
 .ActionCase{
