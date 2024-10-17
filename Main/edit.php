@@ -40,10 +40,6 @@ $user = $result->fetch_assoc();
     <div class="Regist">
         <div class="active"></div>
 
-        <?php if (!empty($errorMessage)): ?>
-            <div class="error-message"><?php echo $errorMessage; ?></div>
-        <?php endif; ?>
-
         <form action="update.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
             <input type="text" name="lname" value="<?php echo htmlspecialchars($user['lname']); ?>" required>
@@ -52,9 +48,16 @@ $user = $result->fetch_assoc();
             <input type="password" name="password" placeholder="New Password (leave blank to keep current)">
             <input type="submit" value="Update">
         </form>
+
+        <?php if (!empty($errorMessage)): ?>
+            <div class="error-message"><?php echo $errorMessage; ?></div>
+        <?php endif; ?>
+
     </div>
 </div>
 
 <script src="../SubScript/cursor.js"></script>
+<script src="../SubScript/errorHandling.js"></script>
+
 </body>
 </html>

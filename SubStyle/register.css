@@ -160,14 +160,14 @@ input[type="submit"]:hover {
     position: absolute;           
     height: 2px;                 
     width: 0;                    
-    top: 30px;                  
+    top: 27px;                  
     left: 25px;                 
     background-color: #FF6452;  
     transition: all 0.3s ease;   
 }
 
 .Regbtn:hover::after {
-    width: 50%;                  
+    width: 40%;                  
 }
 
 .error-message {
@@ -175,7 +175,13 @@ input[type="submit"]:hover {
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
     padding: 10px;
-    margin: 10px 0;
+    margin: 115px 0;
     font-size: small;
     border-radius: 5px;
+    opacity: 1;
+    transition: opacity .5s ease-out;
+}
+
+.error-message.hidden {
+    opacity: 0;
 }

@@ -10,6 +10,7 @@
 
 </head>
 <body>
+
 <div class="circle"></div>
 
 <div class="Cover">
@@ -17,7 +18,7 @@
 
     <div class="headertag">
         <i class="fa-brands fa-php" style="color: #74C0FC;"></i>
-        <p style="color: #ffffff; margin: 10px 13px 0 0; font-size: 12px">register.php</p>
+        <p style="color: #ffffff; margin: 12px 13px 0 0; font-size: 12px">register.php</p>
     </div>
 
     <div class="back">
@@ -28,10 +29,6 @@
     <div class="Regist">
         <div class="active"></div>
 
-        <?php if (isset($_GET['error'])): ?>
-            <div class="error-message"><?php echo htmlspecialchars($_GET['error']); ?></div>
-        <?php endif; ?>
-
         <form action="store.php" method="POST"> 
             <input type="text" name="lname" placeholder="Last Name" required>
             <input type="text" name="fname" placeholder="First Name" required>
@@ -39,10 +36,16 @@
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Register">
         </form>
+
+        <?php if (isset($_GET['error'])): ?>
+            <div class="error-message"><?php echo htmlspecialchars($_GET['error']); ?></div>
+        <?php endif; ?>
         
     </div>
 </div>
 
 <script src="../SubScript/cursor.js"></script>
+<script src="../SubScript/errorHandling.js"></script>
+
 </body>
 </html>

@@ -7,6 +7,22 @@ body {
     height: 100vh;
     margin: 0;
 }
+p {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    color: #7d8690;
+}
+
+.active{
+    background-color: #74C0FC;
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 18%;
+    top: 0;
+}
+
 
 .Cover {
     background-color: rgb(22, 27, 34);
@@ -35,18 +51,65 @@ body {
     margin: -5px 0 0 14px;
     font-size: 25px;
 }
+
+.back {
+    position: absolute;  
+    font-size: small;
+    display: flex;                
+    flex-direction: row;         
+    justify-content: center;      
+    align-items: center;          
+    width: 30%;                    
+    height: 12%; 
+    z-index: 99;
+    right: 10px;
+    top: 60px;
+    margin-left: 7%;
+    margin-top: -5px;     
+}
+
 .headertag {
     position: relative;
     display: flex;
     flex-direction: row;
     background-color: rgb(36, 41, 47);
-    width: 20%;
+    width: 23%;
     height: 12%;
     gap: 6px;
-    margin-top: 40px;
+    margin-top: 23px;
     text-align: center;
     margin-left: 6%;
     border-radius: 9px 9px 0 0;
+}
+
+.fa-solid {
+    margin-left: 40px;            
+}
+
+.Regbtn {         
+    margin-left: -10px;
+    width: 100%;         
+    font-size: small;             
+    text-align: center;           
+    padding: 10px;               
+    color: white;
+    text-decoration: none;        
+    position: relative;           
+}
+
+.Regbtn::after {
+    content: "";                  
+    position: absolute;           
+    height: 2px;                 
+    width: 0;                    
+    top: 27px;                  
+    left: 25px;                 
+    background-color: #FF6452;  
+    transition: all 0.3s ease;   
+}
+
+.Regbtn:hover::after {
+    width: 40%;                  
 }
 
 form {
@@ -54,6 +117,71 @@ form {
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #4b545f;
+    border-radius: 4px;
+    background-color: rgb(50, 55, 62);
+    color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #74C0FC;
+    outline: none;
+}
+
+input[type="submit"] {
+    position: relative;
+    padding: 11px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #74C0FC;
+    transition: color 0.3s;
+}
+
+input[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #74C0FC;
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+input[type="submit"]:hover {
+    background-color: #74C0FC;
+    transition:  ease-in-out 0.2s;
+    z-index: 1;
+}
+
+.error-message {
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin: 180px 0;
+    font-size: small;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity .5s ease-out;
+}
+
+.error-message.hidden {
+    opacity: 0;
 }
 
 
