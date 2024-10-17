@@ -22,7 +22,7 @@
 
     <div class="back">
         <i class="fa-solid fa-user" style="color: #ffffff;"></i>
-        <a href="../Main/users.php" class="Regbtn">View Users</a>
+        <a href="../Main/Login.php" class="Regbtn" style="font-size: .8rem;">Already Registered?</a>
     </div>
 
     <div class="Regist">

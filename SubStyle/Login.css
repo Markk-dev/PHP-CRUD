@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(13, 17, 23);
+    font-family: 'inter';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.Cover {
+    background-color: rgb(22, 27, 34);
+    width: 40%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 65%;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Regist {
+    background-color: rgb(36, 41, 47);
+    position: absolute;
+    top: 5px;
+    margin-top: 100px;
+    height: 75%;
+    width: 93.2%;
+    padding: 20px;
+    border-radius: 0 0 4px 4px;
+}
+
+.fa-brands {
+    place-content: center;
+    margin: -5px 0 0 14px;
+    font-size: 25px;
+}
+.headertag {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(36, 41, 47);
+    width: 20%;
+    height: 12%;
+    gap: 6px;
+    margin-top: 40px;
+    text-align: center;
+    margin-left: 6%;
+    border-radius: 9px 9px 0 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
