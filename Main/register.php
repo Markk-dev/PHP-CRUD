@@ -1,3 +1,12 @@
+<?php
+session_start(); // Start the session
+
+// Set the state to registering
+$_SESSION['state'] = 'registering'; 
+
+// Registration logic here...
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,12 +43,15 @@
             <input type="text" name="fname" placeholder="First Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm" placeholder="Confirm Password" required>
             <input type="submit" value="Register">
         </form>
 
         <?php if (isset($_GET['error'])): ?>
             <div class="error-message"><?php echo htmlspecialchars($_GET['error']); ?></div>
         <?php endif; ?>
+
+        
         
     </div>
 </div>

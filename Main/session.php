@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['lname'] = $user['lname'];
             $_SESSION['fname'] = $user['fname'];
+            $_SESSION['state'] = 'logged_in'; // Set user state to logged in
 
             header('Location: users.php');
             exit();

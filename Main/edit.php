@@ -1,12 +1,28 @@
 <?php
 include 'db.php';
 
+// Check if 'id' is set in the URL
+if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+    // Redirect to users page if 'id' is not set or is not a number
+    header('Location: users.php?error=' . urlencode("Error: Invalid user ID."));
+    exit();
+}
 
+$id = (int)$_GET['id']; // Cast to integer for safety
 $errorMessage = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
 
+// Prepare the SQL statement to prevent SQL injection
+$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
 
-$id = $_GET['id'];
-$result = $conn->query("SELECT * FROM users WHERE id=$id");
+// Check if the user exists
+if ($result->num_rows === 0) {
+    header('Location: users.php?error=' . urlencode("Error: User not found."));
+    exit();
+}
+
 $user = $result->fetch_assoc();
 ?>
 

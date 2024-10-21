@@ -1,3 +1,15 @@
+<?php
+session_start(); // Start the session
+include 'db.php'; // Include your database connection
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id']) || $_SESSION['state'] !== 'logged_in') {
+    // Redirect to login page if not logged in
+    header('Location: login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +19,12 @@
     <link rel="stylesheet" href="../SubStyle/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../SubStyle/cursor.css">
-
-
 </head>
 <body>
 
 <div class="circle"></div>
 
 <div class="Cover">
-
     <p>Registered Users</p>
 
     <div class="headertag">
@@ -28,23 +37,18 @@
         <a href='../Main/Login.php' class="Regbtn">Log out</a>
     </div>
   
-
     <div class="Regist">
         <div class="active"></div>
-            <table border="1">
-                <tr>
-                    <th>ID</th>
-                    <th>Last Name</th>
-                    <th>First Name</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                </tr>
-    
-    
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
 
             <?php
-            include 'db.php';
-
             $result = $conn->query("SELECT * FROM users"); 
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>
@@ -53,14 +57,12 @@
                         <td>{$row['fname']}</td>
                         <td>{$row['email']}</td>
                         <td>
-                            <div class= ActionCase>
-
-                               <div class=Editbtn>
+                            <div class='ActionCase'>
+                               <div class='Editbtn'>
                                     <a href='edit.php?id={$row['id']}' class='LinkEdit'>Edit</a>
                                 </div>
-
-                                <div class=Delbtn>
-                                    <a href='delete.php?id={$row['id']}' class='LinkDel'>Delete</a>
+                                <div class='Delbtn'>
+                                    <a href='delete.php?id={$row['id']}' class='LinkDel' onclick='return confirmDelete();'>Delete</a>
                                 </div>
                             </div>
                         </td>
@@ -71,9 +73,13 @@
         
     </div>
 </div>
-    
-   
+
 <script src="../SubScript/cursor.js"></script>
+<script>
+function confirmDelete() {
+    return confirm("Are you sure you want to delete this user?");
+}
+</script>
 
 </body>
 </html>
