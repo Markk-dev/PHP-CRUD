@@ -1,10 +1,13 @@
 <?php
 session_start(); // Start the session
 
-// Set the state to registering
-$_SESSION['state'] = 'registering'; 
+// Check if the user is already logged in
+if (isset($_SESSION['user_id'])) {
+    // Redirect to users page if already logged in
+    header('Location: users.php');
+    exit();
+}
 
-// Registration logic here...
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +19,6 @@ $_SESSION['state'] = 'registering';
     <link rel="stylesheet" href="../SubStyle/register.css">
     <link rel="stylesheet" href="../SubStyle/cursor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </head>
 <body>
 
@@ -50,9 +52,6 @@ $_SESSION['state'] = 'registering';
         <?php if (isset($_GET['error'])): ?>
             <div class="error-message"><?php echo htmlspecialchars($_GET['error']); ?></div>
         <?php endif; ?>
-
-        
-        
     </div>
 </div>
 

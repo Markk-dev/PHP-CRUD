@@ -1,3 +1,16 @@
+<?php
+session_start(); // Start the session
+
+// Check if the user is already logged in
+if (isset($_SESSION['user_id'])) {
+    // Redirect to users page if already logged in
+    header('Location: users.php');
+    exit();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +19,7 @@
     <title>Login</title>
 
     <link rel="stylesheet" href="../SubStyle/cursor.css">
-    <link rel="stylesheet" href="../SubStyle/login.css">
+    <link rel="stylesheet" href="../SubStyle/Login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>

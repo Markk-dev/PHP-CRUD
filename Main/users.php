@@ -1,10 +1,10 @@
 <?php
-session_start(); // Start the session
-include 'db.php'; // Include your database connection
+session_start(); 
+include 'db.php'; 
 
-// Check if the user is logged in
 if (!isset($_SESSION['user_id']) || $_SESSION['state'] !== 'logged_in') {
-    // Redirect to login page if not logged in
+
+    
     header('Location: login.php');
     exit();
 }
@@ -34,7 +34,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['state'] !== 'logged_in') {
 
     <div class="back">
         <i class="fa-solid fa-user" style="color: #ffffff;"></i>
-        <a href='../Main/Login.php' class="Regbtn">Log out</a>
+        <a href='../Main/endsession.php' class="Regbtn">Log out</a>
     </div>
   
     <div class="Regist">
